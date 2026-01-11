@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT SPECTRA LLC — Technical Consulting & Custom IoT Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #1fb9a8;
+            --secondary: #0f766e;
+            --dark: #0b3d3a;
+            --light: #e6fffb;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 118, 110, 0.9);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--secondary);
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(
+                rgba(11, 61, 58, 0.75),
+                rgba(11, 61, 58, 0.75)
+            ),
+            url("https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+            center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            font-size: 18px;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        /* SERVICES & GRID SECTIONS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* CONTACT */
+        .contact {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .contact-text {
+            max-width: 500px;
+        }
+
+        .contact-text h2 {
+            color: var(--white);
+            text-align: left;
+        }
+
+        .contact-text p {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 6px;
+            width: 350px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        form button {
+            background: var(--dark);
+            color: var(--white);
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div>
+        <h1>IOT SPECTRA LLC</h1>
+        <p>
+            We provide focused technical consulting, reliable IT support, and custom IoT development
+            for businesses that require stable infrastructure, data visibility, and scalable connected solutions.
+            Our approach is practical, transparent, and built around real operational needs.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>Who We Are</h2>
+    <div class="about">
+        IOT SPECTRA LLC is a technology consulting company specializing in applied IoT systems,
+        IT infrastructure support, and custom software solutions. We work with startups and
+        established businesses that need clear architecture, secure connectivity, and predictable performance.
+        Our team focuses on building systems that integrate smoothly into existing environments.
+        We value long-term reliability over short-term experimentation.
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>What We Deliver</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Technical Consulting</h3>
+            <p>
+                We analyze your current systems, technical risks, and growth plans to design
+                efficient and scalable architectures. Our consulting focuses on infrastructure,
+                cloud services, security, and data flow optimization. Every recommendation is practical
+                and implementation-ready.
+            </p>
+        </div>
+        <div class="card">
+            <h3>IT Support & Infrastructure</h3>
+            <p>
+                We provide structured IT support for networks, servers, cloud platforms, and internal tools.
+                Our goal is to reduce downtime, simplify maintenance, and improve system stability.
+                Support is proactive, not reactive.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Custom IoT Development</h3>
+            <p>
+                We design and develop custom IoT solutions from device integration to backend platforms.
+                This includes sensor data collection, dashboards, APIs, and cloud connectivity.
+                Solutions are tailored to your business logic and operational workflows.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section id="advantages">
+    <h2>Why Companies Choose Us</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Engineering-First Approach</h3>
+            <p>
+                We prioritize technical correctness, security, and maintainability over marketing trends.
+                Our solutions are designed to work reliably in real-world conditions.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Clear Communication</h3>
+            <p>
+                We explain technical decisions in clear business terms.
+                Clients always understand what is being built and why.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Long-Term Perspective</h3>
+            <p>
+                Our systems are designed for growth, upgrades, and future integrations,
+                not quick fixes that require rebuilding later.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+    <h2>How We Work</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Assessment</h3>
+            <p>
+                We review requirements, existing systems, constraints, and goals to define a clear technical direction.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Design & Implementation</h3>
+            <p>
+                We design architecture and implement solutions with focus on reliability, security, and performance.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Support & Optimization</h3>
+            <p>
+                After deployment, we provide support, monitoring, and improvements as systems evolve.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-text">
+            <h2>CONTACTS</h2>
+            <p>
+                If you are planning a new IoT project, need technical guidance,
+                or want to improve your existing infrastructure, we are ready to help.
+                Reach out to discuss your requirements and next steps.
+            </p>
+            <p>
+                📧 team@iotspectra.services<br>
+                📍 577 W Morning Star Way, Ivins, UT 84738, US
+            </p>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2026 IOT SPECTRA LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
